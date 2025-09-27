@@ -217,6 +217,12 @@ public class HelloController {
 
 
     }
+    @FXML
+    protected void onCambiarTexto(){
+        int index=random.nextInt(palabras.length);
+        textoAleatorio.setText(palabras[index]);
+
+    }
 
 
 

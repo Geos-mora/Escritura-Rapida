@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="464.0" prefWidth="720.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.escriturarapida.HelloController">
+<BorderPane prefHeight="464.0" prefWidth="720.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.escriturarapida.HelloController">
    <padding>
       <Insets bottom="16.0" />
    </padding>
@@ -48,7 +48,7 @@
         </rowConstraints>
          <children>
             <Label styleClass="label-footer" text="listo para empezar " GridPane.columnIndex="0" GridPane.halignment="CENTER" />
-            <Button mnemonicParsing="false" styleClass="button-footer" onAction="#onResetearValores"  text="Reiniciar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#onResetearValores" styleClass="button-footer" text="Reiniciar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
    </bottom>
@@ -79,6 +79,12 @@
             </HBox>
             <HBox prefHeight="72.0" prefWidth="720.0" styleClass="Hbox-time-label">
                <children>
+                  <HBox prefHeight="66.0" prefWidth="233.0" styleClass="containerCambiarText">
+                     <children>
+                        <Label text="cambiar texto" />
+                        <Button mnemonicParsing="false" onAction="#onCambiarTexto" styleClass="botonCambiarTexto" text="Cambiar" />
+                     </children>
+                  </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" styleClass="container-time">
                      <children>
                         <Label text="Time: " />

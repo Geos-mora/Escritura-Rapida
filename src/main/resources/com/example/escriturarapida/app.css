@@ -135,3 +135,13 @@
     -fx-font-weight:bold;
     -fx-font-size:18;
 }
+.containerCambiarText{
+    -fx-alignment:center;
+    -fx-spacing:10;
+
+}
+.containerCambiarText .botonCambiarTexto{
+    -fx-background-color:#007bff;
+    -fx-text-fill:white;
+    -fx-fondo-weight:bold;
+}
