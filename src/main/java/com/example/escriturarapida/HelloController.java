@@ -46,19 +46,34 @@ public class HelloController {
             "puerta", "mesa", "silla", "casa", "perro", "gato", "auto", "tren", "avion",
             "futuro", "pasado", "presente", "tiempo", "historia", "mundo", "viaje"
     };
-
+    /** Indicates if the last input was incorrect. */
     private  boolean esError=false;
+    /** Flag that indicates if the game has already started. */
     private boolean startGame=false;
+    /** Random generator for word selection. */
     private Random random=new Random();
+    /** Number of correct words typed in the current level. */
     private int palabrasCorrectas=0;
+    /** Current game level. */
     private  int subirNivel=1;
+
+    /** Remaining time in seconds for the countdown. */
     private  int tiempoRegresivo=20;
+    /** indicates the amount of time to reduce */
     private int decremento=0;
+
+    /** Timeline object to control the countdown animation. */
     private Timeline countdown;
 
 
 
-
+    /**
+     * Initializes the controller.
+     * <p>
+     * This method is automatically executed when the FXML is loaded.
+     * It hides error labels and shows the first random word.
+     * </p>
+     */
     @FXML
     public void initialize(){
         mostrarPalabraAleatoria();
@@ -69,7 +84,13 @@ public class HelloController {
 
     }
 
-
+    /**
+     * Validates the user input when clicking the button or pressing Enter.
+     * <p>
+     * If the word is correct, the progress increases and the level may go up.
+     * If it is incorrect, error messages are shown.
+     * </p>
+     */
     @FXML
     protected void onBotonValidarClick() {
         String respuestaUsuario = inputTexto.getText();
@@ -128,7 +149,14 @@ public class HelloController {
 
 
     }
-
+    /**
+     * Starts and displays the countdown timer.
+     * <p>
+     * This method creates a {@link Timeline} that decreases
+     * {@code tiempoRegresivo} every second and updates the label.
+     * When the time reaches 0, the game ends.
+     * </p>
+     */
     protected void mostrarCuentaRegresiva() {
         tiempoRegresivo = 20;
         countDownTime.setText(tiempoRegresivo + "s");
@@ -157,13 +185,22 @@ public class HelloController {
     }
 
 
-
+    /**
+     * Chooses and displays a random word from the {@code palabras} array.
+     */
     protected void mostrarPalabraAleatoria(){
         int index=random.nextInt(palabras.length);
         textoAleatorio.setText(palabras[index]);
 
     }
 
+    /**
+     * Resets game variables to initial state.
+     * <p>
+     * This method stops the countdown, resets the level,
+     * progress, errors and enables the input field.
+     * </p>
+     */
     @FXML
     protected void onResetearValores(){
         startGame=false;
@@ -187,7 +224,9 @@ public class HelloController {
 
     @FXML
     private Label welcomeText;
-
+    /**
+     * Sample action for testing the Hello button.
+     */
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
