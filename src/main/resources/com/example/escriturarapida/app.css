@@ -1,0 +1,137 @@
+/* ====== Base de la ventana ====== */
+.root {
+    -fx-font-family: "Segoe UI", "System";
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f6f9; /* fondo suave */
+    -fx-text-fill: #0f172a;        /* texto oscuro legible */
+    -fx-padding:0;
+}
+
+/* ====== Encabezado (StackPane con clase: header-bar) ====== */
+.header-bar {
+    /* fondo con leve gradiente para efecto “app” moderno */
+    -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #f6f7fb 100%);
+    -fx-padding: 12 20 12 20;
+
+    /* línea sutil inferior para separar del contenido */
+    -fx-border-color: transparent transparent #e5e7eb transparent;
+    -fx-border-width: 0 0 1 0;
+
+    /* sombra ligera para dar profundidad */
+    -fx-effect: dropshadow(gaussian, rgba(16,24,40,0.08), 12, 0.2, 0, 2);
+
+    /* bordes superiores redondeados (opcional) */
+    -fx-background-radius: 12 12 0 0;
+}
+
+/* ====== Título (Label con clase: header-title) ====== */
+.header-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;     /* un poco más “marcado” que bold */
+    -fx-text-fill: #0f172a;   /* buen contraste */
+    -fx-letter-spacing: 0.2px;
+    /* micro-relieve sutil para que “salte” del fondo */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 1.5, 0.1, 0, 1);
+}
+
+
+
+.footer {
+    -fx-border-color: grey transparent transparent transparent; /* arriba negro, los otros transparentes */
+    -fx-border-width: 2px 0 0 0;  /* grosor: top=2px, right=0, bottom=0, left=0 */
+     -fx-effect: dropshadow(gaussian, rgba(16,24,40,0.08), 12, 0.3, 0, 2);
+    -fx-padding: 10;
+}
+
+
+.label-footer {
+    -fx-text-fill: #333333;
+    -fx-font-weight:bold;
+     -fx-alignment: center-left;
+}
+
+.button-footer {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 6 12;
+    -fx-background-radius: 5;
+    -fx-alignment:center-right;
+}
+
+.Vbox-main{
+    -fx-alignment:bottom-center;
+
+}
+.Hbox-time-label{
+
+
+     -fx-alignment:center;
+     -fx-spacing:100px;
+
+}
+.Hbox-time-label .container-time{
+
+    -fx-alignment:center;
+    -fx-spacing:5px;
+
+}
+
+.Hbox-time-label .container-level{
+
+    -fx-alignment:center;
+    -fx-spacing:5px;
+
+}
+.Hbox-time-label .container-time>Label{
+      -fx-font-weight:bold;
+}
+.Hbox-time-label .container-level>Label{
+      -fx-font-weight:bold;
+}
+
+.container-barra{
+    -fx-alignment:center;
+      -fx-padding:20 0 0 0 ;
+}
+.progres-bar{
+    -fx-pref-width:500;
+    -fx-min-height: 18;
+    -fx-pref-height: 18;
+    -fx-max-height: 18;
+
+}
+
+.container-texField{
+    -fx-alignment:center;
+    -fx-spacing:10;
+}
+.container-texField .text-bar{
+    -fx-pref-width:415;
+}
+
+.container-texField .button-text-bar{
+    -fx-background-color:#007bff;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-background-radius:5;
+    -fx-padding: 6 12 ;
+}
+
+.container-textAleatorio{
+   -fx-alignment:center;
+}
+.container-textAleatorio .textAleatorio{
+    -fx-font-size:50;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 5, 0.5, 2, 2);
+
+}
+
+.container-error{
+    -fx-alignment:center;
+}
+.container-error > Label{
+    -fx-text-fill:#750200;
+    -fx-font-weight:bold;
+    -fx-font-size:18;
+}
